@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interests & Beyond | Laya Khosravi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --paper: #f7f6f2;
+      --white: #fffefa;
+      --ink: #20231f;
+      --muted: #70756d;
+      --line: #e4e2da;
+      --green: #526b59;
+      --green-dark: #354b3c;
+      --sage: #e8ede6;
+      --serif: "Playfair Display", Georgia, serif;
+      --sans: "DM Sans", Arial, sans-serif;
+      --max: 1080px;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; background: var(--paper); color: var(--ink);
+      font-family: var(--sans); line-height: 1.65;
+    }
+    a { color: inherit; text-decoration: none; }
+    .wrap { width: min(var(--max), calc(100% - 48px)); margin: 0 auto; }
+    
+    /* Topbar */
+    .topbar {
+      height: 76px; display: flex; align-items: center; justify-content: space-between;
+      border-bottom: 1px solid var(--line);
+    }
+    .brand { font-family: var(--serif); font-size: 21px; font-weight: 600; }
+    .brand span { color: var(--green); }
+    nav a { color: var(--muted); font-size: 13px; font-weight: 500; transition: color .2s; }
+    nav a:hover { color: var(--green-dark); }
+
+    /* Page Header */
+    .header-area { padding: 70px 0 40px; }
+    .kicker { color: var(--green); font-size: 11px; letter-spacing: .15em; text-transform: uppercase; font-weight: 700; }
+    h1 { font: 600 clamp(36px, 5vw, 56px)/1.15 var(--serif); margin: 12px 0 16px; }
+    .subtitle { color: #62675f; font-size: 16px; max-width: 600px; }
+
+    /* Gallery Grid */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 32px;
+      padding: 30px 0 80px;
+    }
+    .card {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 4px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform .2s, box-shadow .2s;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.04);
+    }
+    .card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      display: block;
+      background: var(--sage);
+    }
+    .card-content { padding: 22px; flex-grow: 1; display: flex; flex-direction: column; }
+    .card-tag { font-size: 10px; color: var(--green); text-transform: uppercase; letter-spacing: .12em; font-weight: 700; margin-bottom: 8px; }
+    .card h3 { font: 500 20px var(--serif); margin: 0 0 10px; }
+    .card p { font-size: 13px; color: var(--muted); margin: 0; line-height: 1.7; }
+
+    footer { padding: 30px 0; border-top: 1px solid var(--line); color: var(--muted); font-size: 11px; text-align: center; }
+  </style>
+</head>
+<body>
+
+  <header class="wrap topbar">
+    <a class="brand" href="index.html">Laya<span>.</span></a>
+    <nav>
+      <a href="index.html">← Back to Portfolio</a>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <div class="header-area">
+      <div class="kicker">Personal Corner</div>
+      <h1>Beyond Research &amp; Code</h1>
+      <p class="subtitle">A visual collection of favorite cinema, stories, nature, and the everyday things that bring balance and curiosity.</p>
+    </div>
+
+    <div class="gallery-grid">
+      <!-- Item 1: Cinema -->
+      <article class="card">
+        <!-- برای قرار دادن عکس شخصی، آدرس آن را به جای این لینک بگذارید -->
+        <img src="https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?w=600&auto=format&fit=crop&q=80" alt="Cinema & Movies">
+        <div class="card-content">
+          <span class="card-tag">Films &amp; Series</span>
+          <h3>Game of Thrones &amp; Worldbuilding</h3>
+          <p>Drawn to intricate political intrigue, high stakes, complex character arcs, and immersive cinematography.</p>
+        </div>
+      </article>
+
+      <!-- Item 2: Reading -->
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?w=600&auto=format&fit=crop&q=80" alt="Books">
+        <div class="card-content">
+          <span class="card-tag">Reading</span>
+          <h3>Growth &amp; Perspectives</h3>
+          <p>Exploring thought-provoking books on personal growth, mindset frameworks, and new ways of analyzing ideas.</p>
+        </div>
+      </article>
+
+      <!-- Item 3: Tennis / Sports -->
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1595435934249-5df7ed86e1c0?w=600&auto=format&fit=crop&q=80" alt="Tennis & Swimming">
+        <div class="card-content">
+          <span class="card-tag">Movement</span>
+          <h3>Tennis &amp; Swimming</h3>
+          <p>Precision, focus, and energy. Sports are the best antidote to long hours spent behind code and datasets.</p>
+        </div>
+      </article>
+
+      <!-- Item 4: Coffee / Moments -->
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=600&auto=format&fit=crop&q=80" alt="Coffee moments">
+        <div class="card-content">
+          <span class="card-tag">Routine</span>
+          <h3>Quiet Cups of Coffee</h3>
+          <p>Slow mornings and thoughtful afternoons with a warm cup and good music.</p>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <span>© Laya Khosravi · <a href="index.html" style="color:var(--green)">Return Home</a></span>
+    </div>
+  </footer>
+
+</body>
+</html>
