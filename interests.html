@@ -221,14 +221,6 @@
       transition: transform .25s, border-color .25s;
     }
 
-    .interest-card:nth-child(4) {
-      grid-column: 2 / span 2;
-    }
-
-    .interest-card:nth-child(5) {
-      grid-column: 4 / span 2;
-    }
-
     .interest-card:hover {
       transform: translateY(-4px);
       border-color: #b8c7b8;
@@ -365,94 +357,135 @@
 
     /* RESPONSIVE */
 
-    @media (max-width: 720px) {
+   /* =========================
+   MOBILE RESPONSIVE
+========================= */
 
-      .wrap {
-        width: min(100% - 36px, var(--max));
-      }
+@media (max-width: 768px) {
 
-      .topbar {
-        min-height: 70px;
-        align-items: flex-start;
-        padding: 20px 0;
-        gap: 18px;
-        flex-direction: column;
-      }
+  /* General layout */
+  .wrap {
+    width: 92%;
+    padding: 0;
+  }
 
-      nav {
-        gap: 15px;
-      }
+  /* Header */
+  header {
+    padding: 18px 0;
+  }
 
-      nav a {
-        font-size: 10px;
-      }
+  nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
 
-      .hero {
-        min-height: auto;
-        padding: 65px 0;
-      }
+  nav a {
+    font-size: 12px;
+  }
 
-      section {
-        padding: 58px 0;
-      }
+  /* Hero section */
+  .hero {
+    padding: 55px 0 35px;
+  }
 
-      .family-grid {
-        grid-template-columns: 1fr;
-      }
+  .hero h1 {
+    font-size: clamp(32px, 9vw, 48px);
+    line-height: 1.15;
+  }
 
-      .family-card {
-        max-width: 480px;
-      }
+  .hero p {
+    font-size: 14px;
+  }
 
-      .interest-list {
-        grid-template-columns: 1fr;
-      }
+  /* Family section */
+  .family-grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
 
-      .interest-card,
-      .interest-card:nth-child(4),
-      .interest-card:nth-child(5) {
-        grid-column: 1;
-        min-height: auto;
-      }
+  .family-card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+  }
 
-      .letter-card {
-        padding: 25px;
-      }
+  /* Interests section */
+  .interest-list {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
 
-      .letter-greeting {
-        font-size: 23px;
-      }
+  .interest-card {
+    grid-column: 1;
+    width: 100%;
+    min-height: auto;
+    padding: 22px;
+  }
 
-      .letter-text {
-        font-size: 13px;
-      }
+  .interest-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+  }
 
-      .section-head {
-        align-items: flex-start;
-        flex-direction: column;
-      }
+  .interest-card h3 {
+    font-size: 19px;
+  }
 
-      footer {
-        flex-direction: column;
-      }
-    }
+  .interest-card li {
+    font-size: 14px;
+    line-height: 1.8;
+  }
 
-    @media (prefers-reduced-motion: reduce) {
-      html {
-        scroll-behavior: auto;
-      }
+  /* Future self letter */
+  .letter-card {
+    width: 100%;
+    padding: 25px 22px;
+  }
 
-      *,
-      *::before,
-      *::after {
-        transition-duration: .01ms !important;
-      }
-    }
+  .letter-card p {
+    font-size: 14px;
+    line-height: 1.9;
+  }
 
-  </style>
-</head>
+  .letter-card h2 {
+    font-size: 24px;
+  }
 
-<body>
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 25px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .hero h1 {
+    font-size: 34px;
+  }
+
+  nav {
+    gap: 9px;
+  }
+
+  nav a {
+    font-size: 10px;
+  }
+
+  .interest-card {
+    padding: 18px;
+  }
+
+  .interest-card img {
+    height: 190px;
+  }
+
+  .letter-card {
+    padding: 22px 18px;
+  }
+}
 
   <!-- HEADER -->
 
