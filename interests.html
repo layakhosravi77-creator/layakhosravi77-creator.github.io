@@ -355,137 +355,260 @@
       color: var(--green);
     }
 
-    /* RESPONSIVE */
+    /* TABLET */
 
-   /* =========================
-   MOBILE RESPONSIVE
-========================= */
+    @media (max-width: 900px) {
 
-@media (max-width: 768px) {
+      .topbar {
+        gap: 18px;
+      }
 
-  /* General layout */
-  .wrap {
-    width: 92%;
-    padding: 0;
-  }
+      nav {
+        gap: 15px;
+      }
 
-  /* Header */
-  header {
-    padding: 18px 0;
-  }
+      .interest-list {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+      }
 
-  nav {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 12px;
-  }
+      .interest-card {
+        grid-column: span 2;
+      }
+    }
 
-  nav a {
-    font-size: 12px;
-  }
+    /* MOBILE */
 
-  /* Hero section */
-  .hero {
-    padding: 55px 0 35px;
-  }
+    @media (max-width: 720px) {
 
-  .hero h1 {
-    font-size: clamp(32px, 9vw, 48px);
-    line-height: 1.15;
-  }
+      .wrap {
+        width: calc(100% - 36px);
+      }
 
-  .hero p {
-    font-size: 14px;
-  }
+      /* HEADER */
 
-  /* Family section */
-  .family-grid {
-    grid-template-columns: 1fr;
-    gap: 22px;
-  }
+      .topbar {
+        min-height: auto;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 16px;
+        padding: 20px 0;
+      }
 
-  .family-card img {
-    width: 100%;
-    height: 280px;
-    object-fit: cover;
-  }
+      nav {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 12px 16px;
+      }
 
-  /* Interests section */
-  .interest-list {
-    grid-template-columns: 1fr;
-    gap: 22px;
-  }
+      nav a {
+        font-size: 10px;
+      }
 
-  .interest-card {
-    grid-column: 1;
-    width: 100%;
-    min-height: auto;
-    padding: 22px;
-  }
+      /* HERO */
 
-  .interest-card img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-  }
+      .hero {
+        min-height: auto;
+        padding: 65px 0 50px;
+      }
 
-  .interest-card h3 {
-    font-size: 19px;
-  }
+      h1 {
+        font-size: clamp(38px, 9vw, 54px);
+        line-height: 1.15;
+      }
 
-  .interest-card li {
-    font-size: 14px;
-    line-height: 1.8;
-  }
+      .hero-description {
+        font-size: 14px;
+      }
 
-  /* Future self letter */
-  .letter-card {
-    width: 100%;
-    padding: 25px 22px;
-  }
+      /* SECTIONS */
 
-  .letter-card p {
-    font-size: 14px;
-    line-height: 1.9;
-  }
+      section {
+        padding: 50px 0;
+      }
 
-  .letter-card h2 {
-    font-size: 24px;
-  }
+      .section-head {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 25px;
+      }
 
-  /* Footer */
-  footer {
-    text-align: center;
-    padding: 25px 10px;
-  }
-}
+      h2 {
+        font-size: 34px;
+      }
 
-@media (max-width: 480px) {
+      /* FAMILY */
 
-  .hero h1 {
-    font-size: 34px;
-  }
+      .family-intro {
+        font-size: 13px;
+      }
 
-  nav {
-    gap: 9px;
-  }
+      .family-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
 
-  nav a {
-    font-size: 10px;
-  }
+      .family-card {
+        width: 100%;
+        max-width: 480px;
+        margin: 0 auto;
+      }
 
-  .interest-card {
-    padding: 18px;
-  }
+      .family-photo {
+        width: 100%;
+        max-width: 230px;
+        aspect-ratio: 4 / 5;
+        height: auto;
+      }
 
-  .interest-card img {
-    height: 190px;
-  }
+      /* INTERESTS */
 
-  .letter-card {
-    padding: 22px 18px;
-  }
-}
+      .interest-list {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 20px;
+      }
+
+      .interest-card {
+        grid-column: 1;
+        width: 100%;
+        min-height: auto;
+        padding: 22px;
+      }
+
+      .interest-card:hover {
+        transform: none;
+      }
+
+      .interest-image-placeholder {
+        width: 100%;
+        height: 210px;
+        margin-bottom: 18px;
+      }
+
+      .interest-image-placeholder img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .interest-card h3 {
+        font-size: 23px;
+      }
+
+      .interest-card ul {
+        font-size: 13px;
+      }
+
+      /* FUTURE SELF */
+
+      .letter-card {
+        width: 100%;
+        padding: 26px 22px;
+      }
+
+      .letter-greeting {
+        font-size: 23px;
+      }
+
+      .letter-text {
+        font-size: 13px;
+        line-height: 1.95;
+      }
+
+      .letter-ending {
+        font-size: 21px;
+      }
+
+      /* BACK HOME */
+
+      .back-home {
+        padding: 60px 20px;
+      }
+
+      .back-home h2 {
+        font-size: 36px;
+      }
+
+      /* FOOTER */
+
+      footer {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+        padding: 25px 0;
+      }
+    }
+
+    /* SMALL MOBILE */
+
+    @media (max-width: 480px) {
+
+      .wrap {
+        width: calc(100% - 30px);
+      }
+
+      .brand {
+        font-size: 20px;
+      }
+
+      nav {
+        gap: 10px 13px;
+      }
+
+      nav a {
+        font-size: 9px;
+      }
+
+      .hero {
+        padding: 50px 0 40px;
+      }
+
+      h1 {
+        font-size: 36px;
+        letter-spacing: -1px;
+      }
+
+      h2 {
+        font-size: 30px;
+      }
+
+      .interest-card {
+        padding: 18px;
+      }
+
+      .interest-image-placeholder {
+        height: 185px;
+      }
+
+      .letter-card {
+        padding: 22px 18px;
+      }
+
+      .back-home h2 {
+        font-size: 31px;
+      }
+    }
+
+    /* REDUCED MOTION */
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        transition-duration: .01ms !important;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
 
   <!-- HEADER -->
 
@@ -606,23 +729,23 @@
 
           <!-- SPORTS & ACTIVITY -->
 
-            <article class="interest-card">
-            
-              <div class="interest-image-placeholder">
-                <img src="sports.jpg" alt="Sports and activities">
-              </div>
-            
-              <h3>Sports &amp; Activity</h3>
-            
-              <ul>
-                <li>Swimming</li>
-                <li>Tennis</li>
-                <li>Gymnastics</li>
-                <li>Futsal</li>
-                <li>Bodybuilding</li>
-              </ul>
-            
-            </article>
+          <article class="interest-card">
+
+            <div class="interest-image-placeholder">
+              <img src="sports.jpg" alt="Sports and activities">
+            </div>
+
+            <h3>Sports &amp; Activity</h3>
+
+            <ul>
+              <li>Swimming</li>
+              <li>Tennis</li>
+              <li>Gymnastics</li>
+              <li>Futsal</li>
+              <li>Bodybuilding</li>
+            </ul>
+
+          </article>
 
           <!-- BOOKS -->
 
