@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="description" content="A personal collection of Laya Khosravi's family, favorite films, books, nature, sports, coffee, and tea.">
+  <meta name="description" content="A personal collection of Laya Khosravi's family, favorite films, books, nature, coffee, and tea.">
   <meta name="theme-color" content="#f7f6f2">
   <meta name="author" content="Laya Khosravi">
 
@@ -187,15 +187,18 @@
 
     .family-photo {
       width: 100%;
+      max-width: 230px;
       aspect-ratio: 4 / 5;
       display: block;
       object-fit: cover;
       background: var(--sage);
+      margin: 0 auto;
     }
 
     .family-name {
       font: 500 23px var(--serif);
       margin: 14px 0 2px;
+      text-align: center;
     }
 
     .family-caption {
@@ -227,16 +230,22 @@
       border-color: #b8c7b8;
     }
 
-    .interest-icon {
-      font-size: 27px;
-      color: var(--green);
-      margin-bottom: 20px;
+    /* SQUARE IMAGE PLACEHOLDERS */
+
+    .interest-image-placeholder {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      background: var(--white);
+      border: 1px solid var(--line);
+      margin-bottom: 24px;
+      overflow: hidden;
     }
 
-    .interest-number {
-      color: #9aa396;
-      font: 13px var(--serif);
-      margin-bottom: 7px;
+    .interest-image-placeholder img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
     }
 
     .interest-card h3 {
@@ -514,23 +523,27 @@
         <div class="family-grid">
 
           <article class="family-card">
-            <!-- Add Matin's photo as matin.jpg in the same folder -->
+
             <img
               class="family-photo"
               src="matin.jpg"
               alt="Matin, my younger brother"
             >
+
             <h3 class="family-name">Matin</h3>
+
           </article>
 
           <article class="family-card">
-            <!-- Add Amir's photo as amir.jpg in the same folder -->
+
             <img
               class="family-photo"
               src="amir.jpg"
               alt="Amir, my younger brother"
             >
+
             <h3 class="family-name">Amir</h3>
+
           </article>
 
         </div>
@@ -554,7 +567,9 @@
 
           <article class="interest-card">
 
-            <div class="interest-icon" aria-hidden="true">✦</div>
+            <div class="interest-image-placeholder">
+              <!-- Add your image here -->
+            </div>
 
             <h3>Films &amp; Series</h3>
 
@@ -571,7 +586,9 @@
 
           <article class="interest-card">
 
-            <div class="interest-icon" aria-hidden="true">⌁</div>
+            <div class="interest-image-placeholder">
+              <!-- Add your image here -->
+            </div>
 
             <h3>Books</h3>
 
@@ -589,7 +606,9 @@
 
           <article class="interest-card">
 
-            <div class="interest-icon" aria-hidden="true">❋</div>
+            <div class="interest-image-placeholder">
+              <!-- Add your image here -->
+            </div>
 
             <h3>Nature</h3>
 
@@ -600,29 +619,13 @@
 
           </article>
 
-          <!-- SPORTS -->
-
-          <article class="interest-card">
-
-            <div class="interest-icon" aria-hidden="true">↗</div>
-
-            <h3>Sports &amp; Activity</h3>
-
-            <ul>
-              <li>Swimming</li>
-              <li>Tennis</li>
-              <li>Gymnastics</li>
-              <li>Futsal</li>
-              <li>Bodybuilding</li>
-            </ul>
-
-          </article>
-
           <!-- COFFEE & TEA -->
 
           <article class="interest-card">
 
-            <div class="interest-icon" aria-hidden="true">☕</div>
+            <div class="interest-image-placeholder">
+              <!-- Add your image here -->
+            </div>
 
             <h3>Coffee &amp; Tea</h3>
 
@@ -650,6 +653,7 @@
         <div class="featured">
 
           <div>
+
             <div class="featured-label">An idea I believe in</div>
 
             <h3>
@@ -661,6 +665,7 @@
               a new skill, or an unfamiliar place, I believe curiosity
               is one of the best ways to keep growing.
             </p>
+
           </div>
 
           <div class="featured-mark" aria-hidden="true">
@@ -691,7 +696,7 @@
       </p>
 
       <a class="button" href="index.html">
-        Back to my portfolio ↗
+        Back to my portfolio
       </a>
 
     </section>
@@ -708,7 +713,7 @@
 
     <span>
       Designed with care ·
-      <a href="index.html">Back to home ↑</a>
+      <a href="index.html">Back to home</a>
     </span>
 
   </footer>
