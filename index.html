@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="description" content="Laya Khosravi — MSc student in Computer Science interested in neuroscience, computational biology, machine learning, deep learning, and genomic data analysis.">
+  <meta name="description" content="Laya Khosravi — MSc student in Computer Science, passionate about neuroscience, computational biology, machine learning, deep learning, and genomic research.">
 
   <meta name="theme-color" content="#f7f6f2">
   <meta name="author" content="Laya Khosravi">
@@ -91,14 +91,14 @@
 
     nav {
       display: flex;
-      gap: 25px;
+      gap: 22px;
       align-items: center;
       flex-wrap: wrap;
     }
 
     nav a {
       color: var(--muted);
-      font-size: 11px;
+      font-size: 10px;
       letter-spacing: .04em;
       transition: color .2s;
     }
@@ -166,8 +166,8 @@
     .intro {
       max-width: 590px;
       color: #62675f;
-      font-size: 16px;
-      line-height: 1.9;
+      font-size: 15px;
+      line-height: 1.95;
     }
 
     .hero-actions {
@@ -304,6 +304,39 @@
       margin: 0;
     }
 
+    /* EDUCATION */
+
+    .education-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    .education-card {
+      padding: 25px;
+      border: 1px solid var(--line);
+      background: rgba(255,254,250,.5);
+    }
+
+    .education-card .date {
+      color: var(--green);
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: .13em;
+    }
+
+    .education-card h3 {
+      font: 500 22px var(--serif);
+      margin: 12px 0 8px;
+    }
+
+    .education-card p {
+      color: var(--muted);
+      font-size: 12px;
+      margin: 0 0 7px;
+      line-height: 1.8;
+    }
+
     /* PROJECTS */
 
     .project-list {
@@ -347,37 +380,50 @@
       color: var(--green-dark);
     }
 
-    /* EDUCATION */
+    /* PUBLICATIONS */
 
-    .education-grid {
+    .publication-list {
+      border-top: 1px solid var(--line);
+    }
+
+    .publication {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 18px;
+      grid-template-columns: 85px 1fr;
+      gap: 25px;
+      padding: 30px 4px;
+      border-bottom: 1px solid var(--line);
     }
 
-    .education-card {
-      padding: 25px;
-      border: 1px solid var(--line);
-      background: rgba(255,254,250,.5);
-    }
-
-    .education-card .date {
+    .publication-year {
       color: var(--green);
-      font-size: 10px;
-      text-transform: uppercase;
-      letter-spacing: .13em;
+      font: 500 23px var(--serif);
     }
 
-    .education-card h3 {
-      font: 500 22px var(--serif);
-      margin: 12px 0 8px;
+    .publication h3 {
+      font: 500 21px/1.5 var(--serif);
+      margin: 0 0 12px;
     }
 
-    .education-card p {
+    .publication-authors {
       color: var(--muted);
       font-size: 12px;
-      margin: 0 0 7px;
-      line-height: 1.8;
+      margin: 0 0 10px;
+    }
+
+    .publication-venue {
+      color: var(--muted);
+      font-size: 12px;
+      margin: 0 0 12px;
+    }
+
+    .publication-status {
+      display: inline-block;
+      padding: 5px 11px;
+      border: 1px solid #cbd8c9;
+      color: var(--green-dark);
+      background: var(--sage);
+      font-size: 10px;
+      letter-spacing: .05em;
     }
 
     /* CONTACT */
@@ -398,16 +444,51 @@
       font-size: clamp(38px, 5vw, 58px);
     }
 
-    .contact p {
+    .contact-intro {
       color: #d2d9d0;
       font-size: 13px;
       max-width: 520px;
-      margin: 18px 0 26px;
+      margin: 18px 0 35px;
+    }
+
+    .contact-details {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      max-width: 850px;
+      margin-top: 35px;
+      padding-top: 30px;
+      border-top: 1px solid rgba(255,255,255,.2);
+    }
+
+    .contact-item {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .contact-label {
+      color: #c6d2c4;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: .14em;
+    }
+
+    .contact-item a,
+    .contact-item span {
+      color: #f8f7f1;
+      font-size: 13px;
+      overflow-wrap: anywhere;
+    }
+
+    .contact-item a:hover {
+      color: #c6d2c4;
     }
 
     .contact .button {
       border-color: #e2e9df;
       color: #f8f7f1;
+      margin-top: 30px;
     }
 
     .contact .button:hover {
@@ -503,6 +584,10 @@
         border-bottom: 0;
       }
 
+      .education-grid {
+        grid-template-columns: 1fr;
+      }
+
       .project {
         grid-template-columns: 34px 1fr;
         gap: 12px;
@@ -512,8 +597,14 @@
         grid-column: 2;
       }
 
-      .education-grid {
+      .publication {
         grid-template-columns: 1fr;
+        gap: 10px;
+      }
+
+      .contact-details {
+        grid-template-columns: 1fr;
+        gap: 25px;
       }
 
       .section-head {
@@ -561,6 +652,7 @@
       <a href="#research">RESEARCH INTERESTS</a>
       <a href="#education">EDUCATION</a>
       <a href="#projects">PROJECTS</a>
+      <a href="#publications">PUBLICATIONS</a>
       <a href="interests.html">PERSONAL INTERESTS</a>
       <a href="#contact">CONTACT</a>
     </nav>
@@ -583,8 +675,11 @@
           </h1>
 
           <p class="intro">
-            M.Sc. student in Computer Science exploring the intersection
-            of neuroscience, computational biology, machine learning,
+            I am an M.Sc. student in Computer Science with a strong
+            curiosity about science and a passion for continuous learning.
+            I am highly motivated to expand my knowledge through academic
+            study and research, particularly at the intersection of
+            neuroscience, computational biology, machine learning,
             deep learning, and genomic data analysis.
           </p>
 
@@ -635,7 +730,7 @@
 
             <p>
               I am an M.Sc. student in Computer Science at Shahrekord University,
-              with a B.Sc. background in Biology from Alzahra University.
+              with a B.Sc. background in Biology from Alzahra University, Tehran.
             </p>
 
             <p>
@@ -672,83 +767,59 @@
         <div class="interest-grid">
 
           <article class="interest">
-
             <div class="interest-num">01</div>
-
             <h3>Neuroscience</h3>
-
             <p>
               Understanding the brain, neural systems,
               and their underlying biological mechanisms.
             </p>
-
           </article>
 
           <article class="interest">
-
             <div class="interest-num">02</div>
-
             <h3>Neurological Disorders</h3>
-
             <p>
               Investigating the molecular and genetic
               mechanisms of brain-related diseases.
             </p>
-
           </article>
 
           <article class="interest">
-
             <div class="interest-num">03</div>
-
             <h3>Computational Biology</h3>
-
             <p>
               Using computational approaches to explore
               complex biological and biomedical questions.
             </p>
-
           </article>
 
           <article class="interest">
-
             <div class="interest-num">04</div>
-
             <h3>Machine Learning & Deep Learning</h3>
-
             <p>
               Developing intelligent models for biological
               data analysis and biomedical applications.
             </p>
-
           </article>
 
           <article class="interest">
-
             <div class="interest-num">05</div>
-
             <h3>Disease Treatment Research</h3>
-
             <p>
               Exploring computational approaches to
               understanding diseases and discovering
               potential therapeutic strategies.
             </p>
-
           </article>
 
           <article class="interest">
-
             <div class="interest-num">06</div>
-
             <h3>Disease Genomics</h3>
-
             <p>
               Investigating genomic alterations,
               gene expression, and molecular biomarkers
               associated with diseases.
             </p>
-
           </article>
 
         </div>
@@ -776,17 +847,11 @@
 
             <h3>M.Sc. in Computer Science</h3>
 
-            <p>
-              Shahrekord University, Iran
-            </p>
+            <p>Shahrekord University, Iran</p>
 
-            <p>
-              GPA: 18.08 / 20
-            </p>
+            <p>GPA: 18.08 / 20</p>
 
-            <p>
-              Ranked 1st in the class
-            </p>
+            <p>Ranked 1st in the class</p>
 
           </article>
 
@@ -796,9 +861,7 @@
 
             <h3>B.Sc. in Biology</h3>
 
-            <p>
-              Alzahra University, Tehran, Iran
-            </p>
+            <p>Alzahra University, Tehran, Iran</p>
 
           </article>
 
@@ -884,6 +947,59 @@
 
       </section>
 
+      <!-- PUBLICATIONS -->
+
+      <section id="publications">
+
+        <div class="section-head">
+
+          <div>
+            <div class="section-kicker">05 / Publications</div>
+            <h2>Research Publications</h2>
+          </div>
+
+          <div class="section-note">
+            Scientific contributions
+          </div>
+
+        </div>
+
+        <div class="publication-list">
+
+          <article class="publication">
+
+            <div class="publication-year">
+              2026
+            </div>
+
+            <div>
+
+              <h3>
+                Repeated-Split Evaluation of a Staged Feature-Selection
+                Pipeline for Autism Spectrum Disorder Transcriptomics
+                in Peripheral Blood
+              </h3>
+
+              <p class="publication-authors">
+                Khosravi, L., & Vedadian, S.
+              </p>
+
+              <p class="publication-venue">
+                ICBME 2026, Iran.
+              </p>
+
+              <span class="publication-status">
+                Accepted · To be published in IEEE Xplore
+              </span>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </section>
+
     </div>
 
     <!-- CONTACT -->
@@ -892,17 +1008,51 @@
 
       <div class="wrap">
 
-        <div class="section-kicker">05 / Contact</div>
+        <div class="section-kicker">06 / Contact</div>
 
         <h2>
           Interested in research or collaboration?
         </h2>
 
-        <p>
+        <p class="contact-intro">
           I welcome conversations about research,
-          interdisciplinary projects, and opportunities
-          to learn and collaborate.
+          interdisciplinary projects, academic opportunities,
+          and potential collaborations.
         </p>
+
+        <div class="contact-details">
+
+          <div class="contact-item">
+
+            <div class="contact-label">Email</div>
+
+            <a href="mailto:layakhosravi77@gmail.com">
+              layakhosravi77@gmail.com
+            </a>
+
+          </div>
+
+          <div class="contact-item">
+
+            <div class="contact-label">Phone</div>
+
+            <a href="tel:+989921280510">
+              +98 992 128 0510
+            </a>
+
+          </div>
+
+          <div class="contact-item">
+
+            <div class="contact-label">Location</div>
+
+            <span>
+              Isfahan, Iran
+            </span>
+
+          </div>
+
+        </div>
 
         <a
           class="button"
