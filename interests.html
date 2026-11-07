@@ -1,11 +1,11 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="description" content="A personal collection of Laya Khosravi's interests, favorite stories, books, nature, sports, coffee, and everyday inspirations.">
-
+  <meta name="description" content="A personal collection of Laya Khosravi's family, favorite films, books, nature, sports, coffee, and tea.">
   <meta name="theme-color" content="#f7f6f2">
   <meta name="author" content="Laya Khosravi">
 
@@ -13,7 +13,6 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 
   <style>
@@ -26,10 +25,8 @@
       --green: #526b59;
       --green-dark: #354b3c;
       --sage: #e8ede6;
-
       --serif: "Playfair Display", Georgia, serif;
       --sans: "DM Sans", Arial, sans-serif;
-
       --max: 1080px;
     }
 
@@ -107,38 +104,6 @@
       color: var(--green-dark);
     }
 
-    /* BUTTON */
-
-    .button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      padding: 13px 19px;
-      border: 1px solid var(--green-dark);
-      font-size: 11px;
-      letter-spacing: .06em;
-      text-transform: uppercase;
-      transition: all .2s;
-    }
-
-    .button.primary {
-      background: var(--green-dark);
-      color: white;
-    }
-
-    .button.primary:hover {
-      background: var(--green);
-    }
-
-    .button.secondary {
-      color: var(--green-dark);
-    }
-
-    .button.secondary:hover {
-      background: var(--sage);
-    }
-
     /* HERO */
 
     .hero {
@@ -147,31 +112,12 @@
       flex-direction: column;
       justify-content: center;
       padding: 80px 0;
-      border-top: 0;
-    }
-
-    .eyebrow {
-      color: var(--green);
-      text-transform: uppercase;
-      letter-spacing: .18em;
-      font-size: 10px;
-      font-weight: 700;
-      display: flex;
-      align-items: center;
-      gap: 11px;
-    }
-
-    .eyebrow::before {
-      content: "";
-      width: 27px;
-      height: 1px;
-      background: var(--green);
     }
 
     h1 {
       font: 500 clamp(48px, 7vw, 76px)/1.1 var(--serif);
       letter-spacing: -2px;
-      margin: 24px 0 20px;
+      margin: 0 0 20px;
       max-width: 800px;
     }
 
@@ -185,6 +131,7 @@
       color: #62675f;
       font-size: 15px;
       line-height: 1.9;
+      margin: 0;
     }
 
     /* GENERAL SECTIONS */
@@ -216,33 +163,45 @@
       margin: 9px 0 0;
     }
 
-    .section-note {
-      color: var(--muted);
-      font-size: 12px;
-    }
+    /* FAMILY */
 
-    /* INTRODUCTION */
-
-    .intro-grid {
-      display: grid;
-      grid-template-columns: .8fr 1.2fr;
-      gap: 75px;
-    }
-
-    .intro-label {
-      font: 500 25px/1.45 var(--serif);
-      max-width: 330px;
-    }
-
-    .intro-copy {
+    .family-intro {
       color: #62675f;
       font-size: 14px;
       line-height: 1.95;
-      max-width: 650px;
+      max-width: 700px;
+      margin: 0 0 30px;
     }
 
-    .intro-copy p {
-      margin: 0 0 17px;
+    .family-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 22px;
+    }
+
+    .family-card {
+      background: var(--white);
+      border: 1px solid var(--line);
+      padding: 14px;
+    }
+
+    .family-photo {
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      display: block;
+      object-fit: cover;
+      background: var(--sage);
+    }
+
+    .family-name {
+      font: 500 23px var(--serif);
+      margin: 14px 0 2px;
+    }
+
+    .family-caption {
+      color: var(--muted);
+      font-size: 11px;
+      margin: 0;
     }
 
     /* INTEREST CARDS */
@@ -282,18 +241,29 @@
 
     .interest-card h3 {
       font: 500 26px/1.3 var(--serif);
-      margin: 0 0 12px;
+      margin: 0 0 15px;
+    }
+
+    .interest-card ul {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 2;
+      margin: 0;
+      padding-left: 19px;
+    }
+
+    .interest-card li {
+      padding-left: 3px;
     }
 
     .interest-card p {
       color: var(--muted);
-      font-size: 12px;
+      font-size: 13px;
       line-height: 1.9;
       margin: 0;
-      max-width: 450px;
     }
 
-    /* FEATURED INTEREST */
+    /* FEATURED SECTION */
 
     .featured {
       background: var(--sage);
@@ -347,65 +317,6 @@
       z-index: 1;
     }
 
-    /* PERSONAL NOTE */
-
-    .quote {
-      text-align: center;
-      max-width: 750px;
-      margin: 0 auto;
-      padding: 15px 0;
-    }
-
-    .quote-symbol {
-      color: var(--green);
-      font: 50px var(--serif);
-      line-height: 1;
-    }
-
-    .quote p {
-      color: var(--green-dark);
-      font: italic 25px/1.6 var(--serif);
-      margin: 18px 0;
-    }
-
-    .quote-caption {
-      color: var(--muted);
-      font-size: 10px;
-      letter-spacing: .15em;
-      text-transform: uppercase;
-    }
-
-    /* FAVORITES */
-
-    .favorites-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      border: 1px solid var(--line);
-    }
-
-    .favorite {
-      padding: 25px;
-      min-height: 145px;
-      border-right: 1px solid var(--line);
-      background: rgba(255,254,250,.5);
-    }
-
-    .favorite:last-child {
-      border-right: 0;
-    }
-
-    .favorite h3 {
-      font: 500 20px var(--serif);
-      margin: 0 0 9px;
-    }
-
-    .favorite p {
-      color: var(--muted);
-      font-size: 12px;
-      line-height: 1.8;
-      margin: 0;
-    }
-
     /* BACK HOME */
 
     .back-home {
@@ -433,12 +344,20 @@
       margin: 0 auto 28px;
     }
 
-    .back-home .button {
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 13px 19px;
+      border: 1px solid #e2e9df;
       color: white;
-      border-color: #e2e9df;
+      font-size: 11px;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      transition: background .2s;
     }
 
-    .back-home .button:hover {
+    .button:hover {
       background: rgba(255,255,255,.1);
     }
 
@@ -460,7 +379,6 @@
     /* RESPONSIVE */
 
     @media (max-width: 720px) {
-
       .wrap {
         width: min(100% - 36px, var(--max));
       }
@@ -490,13 +408,13 @@
         padding: 58px 0;
       }
 
-      .intro-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-      }
-
+      .family-grid,
       .interest-list {
         grid-template-columns: 1fr;
+      }
+
+      .family-card {
+        max-width: 480px;
       }
 
       .interest-card {
@@ -512,27 +430,9 @@
         min-height: 180px;
       }
 
-      .favorites-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .favorite {
-        border-right: 0;
-        border-bottom: 1px solid var(--line);
-        min-height: auto;
-      }
-
-      .favorite:last-child {
-        border-bottom: 0;
-      }
-
       .section-head {
         align-items: flex-start;
         flex-direction: column;
-      }
-
-      .quote p {
-        font-size: 21px;
       }
 
       footer {
@@ -551,7 +451,6 @@
         transition-duration: .01ms !important;
       }
     }
-
   </style>
 </head>
 
@@ -566,19 +465,12 @@
     </a>
 
     <nav aria-label="Main navigation">
-
       <a href="index.html#about">ABOUT</a>
-
       <a href="index.html#research">RESEARCH</a>
-
       <a href="interests.html" class="active" aria-current="page">BEYOND</a>
-
       <a href="index.html#projects">PROJECTS</a>
-
       <a href="index.html#education">EDUCATION</a>
-
       <a href="index.html#contact">CONTACT</a>
-
     </nav>
 
   </header>
@@ -591,45 +483,57 @@
 
       <section class="hero">
 
-        <div class="eyebrow">
-          Beyond research · Personal interests
-        </div>
-
         <h1>
           A world<br>
           <em>beyond the code.</em>
         </h1>
 
         <p class="hero-description">
-          Maybe life is about enjoying the little moments! at least, that's what it means to me!
+          Maybe life is about enjoying the little moments — at least, that's what it means to me!
         </p>
 
       </section>
 
-      <!-- INTRODUCTION -->
+      <!-- FAMILY -->
 
-      <section>
+      <section id="family">
 
         <div class="section-head">
-
           <div>
-            <div class="section-kicker">01 / Family </div>
+            <div class="section-kicker">01 / FAMILY</div>
             <h2>Love Beyond Yourself!</h2>
           </div>
-
         </div>
 
-        <div class="intro-grid">
+        <p class="family-intro">
+          Family is the most important part of my life.
+          I have two younger brothers, Matin and Amir, and they both know just how much I love them. :)
+          They hold a very special place in my heart.
+        </p>
 
-          <div class="intro-label">
-            Family is the most important part of my life.
-            I have two younger brothers, Matin and Amir, and they both know just how much I love them. :)
-            They hold a very special place in my heart, and I'm grateful to have them in my life..
-          </div>
+        <div class="family-grid">
 
+          <article class="family-card">
+            <!-- Add Matin's photo as matin.jpg in the same folder -->
+            <img
+              class="family-photo"
+              src="matin.jpg"
+              alt="Matin, my younger brother"
+            >
+            <h3 class="family-name">Matin</h3>
+            <p class="family-caption">My younger brother</p>
+          </article>
 
-
-          </div>
+          <article class="family-card">
+            <!-- Add Amir's photo as amir.jpg in the same folder -->
+            <img
+              class="family-photo"
+              src="amir.jpg"
+              alt="Amir, my younger brother"
+            >
+            <h3 class="family-name">Amir</h3>
+            <p class="family-caption">My younger brother</p>
+          </article>
 
         </div>
 
@@ -640,36 +544,30 @@
       <section id="interests">
 
         <div class="section-head">
-
           <div>
-            <div class="section-kicker">02 / Interests</div>
+            <div class="section-kicker">02 / INTERESTS</div>
             <h2>Things I enjoy</h2>
           </div>
-
-          <div class="section-note">
-            Different interests, one curious mind
-          </div>
-
         </div>
 
         <div class="interest-list">
 
-          <!-- FILMS -->
+          <!-- FILMS & SERIES -->
 
           <article class="interest-card">
 
             <div class="interest-icon" aria-hidden="true">✦</div>
 
-            <div class="interest-number">01 / STORIES</div>
+            <div class="interest-number">01 / FILMS &amp; SERIES</div>
 
             <h3>Films &amp; Series</h3>
 
-            <p>
-              I enjoy immersive stories, memorable characters,
-              imaginative worlds, and narratives that stay
-              with you long after they end.
-              <em>Game of Thrones</em> is one of the worlds I enjoy.
-            </p>
+            <ul>
+              <li>Game of Thrones</li>
+              <li>Money Heist</li>
+              <li>The Walking Dead</li>
+              <li>The Last of Us</li>
+            </ul>
 
           </article>
 
@@ -679,16 +577,17 @@
 
             <div class="interest-icon" aria-hidden="true">⌁</div>
 
-            <div class="interest-number">02 / READING</div>
+            <div class="interest-number">02 / BOOKS</div>
 
-            <h3>Books &amp; Ideas</h3>
+            <h3>Books</h3>
 
-            <p>
-              I enjoy books about success, personal growth,
-              psychology, and new ways of thinking.
-              There is always something interesting to learn
-              from a different perspective.
-            </p>
+            <ul>
+              <li>Atomic Habits</li>
+              <li>The Midnight Library</li>
+              <li>Harry Potter</li>
+              <li>Crime and Punishment</li>
+              <li>The Silent Patient</li>
+            </ul>
 
           </article>
 
@@ -698,15 +597,14 @@
 
             <div class="interest-icon" aria-hidden="true">❋</div>
 
-            <div class="interest-number">03 / OUTDOORS</div>
+            <div class="interest-number">03 / NATURE</div>
 
             <h3>Nature</h3>
 
-            <p>
-              Nature offers a different kind of inspiration.
-              I enjoy beautiful landscapes, peaceful environments,
-              and moments away from everyday routines.
-            </p>
+            <ul>
+              <li>The Persian Gulf</li>
+              <li>The Forests of Northern Iran</li>
+            </ul>
 
           </article>
 
@@ -716,19 +614,21 @@
 
             <div class="interest-icon" aria-hidden="true">↗</div>
 
-            <div class="interest-number">04 / MOVEMENT</div>
+            <div class="interest-number">04 / SPORTS</div>
 
             <h3>Sports &amp; Activity</h3>
 
-            <p>
-              Swimming and tennis are among the activities
-              I enjoy. I appreciate the combination of movement,
-              focus, discipline, and energy.
-            </p>
+            <ul>
+              <li>Swimming</li>
+              <li>Tennis</li>
+              <li>Gymnastics</li>
+              <li>Futsal</li>
+              <li>Bodybuilding</li>
+            </ul>
 
           </article>
 
-          <!-- COFFEE -->
+          <!-- COFFEE & TEA -->
 
           <article class="interest-card">
 
@@ -739,9 +639,7 @@
             <h3>Coffee &amp; Tea</h3>
 
             <p>
-              A good cup of coffee or tea can make an ordinary
-              moment feel special. I enjoy the calm and simplicity
-              of these little daily rituals.
+              They are a big part of my interests, and I absolutely adore them!
             </p>
 
           </article>
@@ -755,21 +653,16 @@
       <section>
 
         <div class="section-head">
-
           <div>
-            <div class="section-kicker">03 / A little perspective</div>
+            <div class="section-kicker">03 / A LITTLE PERSPECTIVE</div>
             <h2>Curiosity never ends</h2>
           </div>
-
         </div>
 
         <div class="featured">
 
           <div>
-
-            <div class="featured-label">
-              An idea I believe in
-            </div>
+            <div class="featured-label">An idea I believe in</div>
 
             <h3>
               There is always something new to discover.
@@ -780,89 +673,10 @@
               a new skill, or an unfamiliar place, I believe curiosity
               is one of the best ways to keep growing.
             </p>
-
           </div>
 
           <div class="featured-mark" aria-hidden="true">
-
             <div class="featured-symbol">L.K.</div>
-
-          </div>
-
-        </div>
-
-      </section>
-
-      <!-- FAVORITES -->
-
-      <section>
-
-        <div class="section-head">
-
-          <div>
-            <div class="section-kicker">04 / Personal collection</div>
-            <h2>My favorites</h2>
-          </div>
-
-          <div class="section-note">
-            A space for things worth remembering
-          </div>
-
-        </div>
-
-        <div class="favorites-grid">
-
-          <article class="favorite">
-
-            <h3>Favorite stories</h3>
-
-            <p>
-              Game of Thrones and stories with rich worlds,
-              complex characters, and memorable journeys.
-            </p>
-
-          </article>
-
-          <article class="favorite">
-
-            <h3>Favorite activities</h3>
-
-            <p>
-              Swimming, tennis, exploring nature,
-              and discovering new things.
-            </p>
-
-          </article>
-
-          <article class="favorite">
-
-            <h3>Favorite moments</h3>
-
-            <p>
-              A good book, a peaceful environment,
-              and a warm cup of coffee or tea.
-            </p>
-
-          </article>
-
-        </div>
-
-      </section>
-
-      <!-- QUOTE -->
-
-      <section>
-
-        <div class="quote">
-
-          <div class="quote-symbol" aria-hidden="true">“</div>
-
-          <p>
-            Stay curious. Keep exploring. Never stop discovering.
-          </p>
-
-          <div class="quote-caption">
-            A personal reminder
           </div>
 
         </div>
@@ -918,3 +732,4 @@
 
 </body>
 </html>
+```
