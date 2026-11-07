@@ -1,10 +1,11 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="description" content="Laya Khosravi — MSc student in Computer Science interested in machine learning, computational biology, bioinformatics, and genomic data analysis.">
+  <meta name="description" content="Laya Khosravi — MSc student in Computer Science interested in neuroscience, computational biology, machine learning, deep learning, and genomic data analysis.">
 
   <meta name="theme-color" content="#f7f6f2">
   <meta name="author" content="Laya Khosravi">
@@ -150,24 +151,6 @@
       border-top: 0;
     }
 
-    .eyebrow {
-      color: var(--green);
-      text-transform: uppercase;
-      letter-spacing: .18em;
-      font-size: 10px;
-      font-weight: 700;
-      display: flex;
-      align-items: center;
-      gap: 11px;
-    }
-
-    .eyebrow::before {
-      content: "";
-      width: 27px;
-      height: 1px;
-      background: var(--green);
-    }
-
     h1 {
       font: 600 clamp(54px, 7.5vw, 88px)/1.04 var(--serif);
       letter-spacing: -3px;
@@ -194,45 +177,33 @@
       margin-top: 32px;
     }
 
-    .hero-mark {
+    /* PROFILE PHOTO */
+
+    .hero-photo {
       width: min(100%, 300px);
       aspect-ratio: 4 / 5;
       justify-self: end;
-      background: var(--sage);
       position: relative;
-      display: grid;
-      place-items: center;
       border: 1px solid #dce4d9;
+      padding: 12px;
+      background: var(--sage);
     }
 
-    .hero-mark::before,
-    .hero-mark::after {
+    .hero-photo::before {
       content: "";
       position: absolute;
-      border: 1px solid #b9c8b8;
-      inset: 18px;
-    }
-
-    .hero-mark::after {
-      inset: 31px;
-      border-color: #d0d9ce;
-    }
-
-    .monogram {
-      font: 500 92px/1 var(--serif);
-      color: var(--green-dark);
+      inset: 22px;
+      border: 1px solid rgba(255,255,255,.65);
+      pointer-events: none;
       z-index: 1;
-      letter-spacing: -8px;
     }
 
-    .mark-caption {
-      position: absolute;
-      z-index: 2;
-      bottom: 43px;
-      font-size: 9px;
-      color: var(--green);
-      text-transform: uppercase;
-      letter-spacing: .2em;
+    .hero-photo img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+      object-position: center;
     }
 
     /* GENERAL SECTIONS */
@@ -306,10 +277,15 @@
       min-height: 155px;
       background: rgba(255,254,250,.45);
       border-right: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
     }
 
-    .interest:last-child {
+    .interest:nth-child(3n) {
       border-right: 0;
+    }
+
+    .interest:nth-last-child(-n+3) {
+      border-bottom: 0;
     }
 
     .interest-num {
@@ -326,52 +302,6 @@
       font-size: 11px;
       color: var(--muted);
       margin: 0;
-    }
-
-    /* PERSONAL INTERESTS */
-
-    .personal-grid {
-      display: grid;
-      grid-template-columns: repeat(5, minmax(0, 1fr));
-      border-top: 1px solid var(--line);
-      border-bottom: 1px solid var(--line);
-    }
-
-    .personal-card {
-      padding: 27px 20px 30px 0;
-      min-height: 190px;
-      border-right: 1px solid var(--line);
-      margin-right: 20px;
-    }
-
-    .personal-card:last-child {
-      border-right: 0;
-      margin-right: 0;
-    }
-
-    .personal-icon {
-      color: var(--green);
-      font-size: 20px;
-      margin-bottom: 23px;
-    }
-
-    .personal-card h3 {
-      font: 500 20px/1.25 var(--serif);
-      margin: 0 0 10px;
-    }
-
-    .personal-card p {
-      color: var(--muted);
-      font-size: 12px;
-      line-height: 1.8;
-      margin: 0;
-    }
-
-    .personal-note {
-      margin-top: 25px;
-      color: var(--muted);
-      font: italic 17px/1.7 var(--serif);
-      max-width: 650px;
     }
 
     /* PROJECTS */
@@ -440,13 +370,14 @@
 
     .education-card h3 {
       font: 500 22px var(--serif);
-      margin: 12px 0 5px;
+      margin: 12px 0 8px;
     }
 
     .education-card p {
       color: var(--muted);
       font-size: 12px;
-      margin: 0;
+      margin: 0 0 7px;
+      line-height: 1.8;
     }
 
     /* CONTACT */
@@ -508,24 +439,6 @@
       .about-grid {
         gap: 35px;
       }
-
-      .personal-grid {
-        grid-template-columns: repeat(3, 1fr);
-      }
-
-      .personal-card {
-        margin: 0;
-        padding: 25px 16px;
-        border-bottom: 1px solid var(--line);
-      }
-
-      .personal-card:nth-child(3n) {
-        border-right: 0;
-      }
-
-      .personal-card:last-child {
-        border-bottom: 0;
-      }
     }
 
     @media (max-width: 720px) {
@@ -560,13 +473,9 @@
         letter-spacing: -2px;
       }
 
-      .hero-mark {
+      .hero-photo {
         width: 210px;
         justify-self: start;
-      }
-
-      .monogram {
-        font-size: 72px;
       }
 
       section {
@@ -582,33 +491,15 @@
         grid-template-columns: 1fr;
       }
 
-      .interest {
+      .interest,
+      .interest:nth-child(3n),
+      .interest:nth-last-child(-n+3) {
         border-right: 0;
         border-bottom: 1px solid var(--line);
         min-height: auto;
       }
 
       .interest:last-child {
-        border-bottom: 0;
-      }
-
-      .personal-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-
-      .personal-card {
-        min-height: auto;
-        padding: 22px 14px;
-        margin: 0;
-        border-right: 1px solid var(--line);
-        border-bottom: 1px solid var(--line);
-      }
-
-      .personal-card:nth-child(2n) {
-        border-right: 0;
-      }
-
-      .personal-card:last-child {
         border-bottom: 0;
       }
 
@@ -639,18 +530,6 @@
       nav {
         gap: 11px;
       }
-
-      .personal-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .personal-card {
-        border-right: 0;
-      }
-
-      .personal-card:last-child {
-        border-bottom: 0;
-      }
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -679,10 +558,10 @@
 
     <nav aria-label="Main navigation">
       <a href="#about">ABOUT</a>
-      <a href="#research">RESEARCH</a>
-      <a href="interests.html">BEYOND</a>
-      <a href="#projects">PROJECTS</a>
+      <a href="#research">RESEARCH INTERESTS</a>
       <a href="#education">EDUCATION</a>
+      <a href="#projects">PROJECTS</a>
+      <a href="interests.html">PERSONAL INTERESTS</a>
       <a href="#contact">CONTACT</a>
     </nav>
 
@@ -698,10 +577,6 @@
 
         <div>
 
-          <div class="eyebrow">
-            Personal portfolio · Research &amp; technology
-          </div>
-
           <h1>
             Laya<br>
             <em>Khosravi</em>
@@ -709,7 +584,8 @@
 
           <p class="intro">
             M.Sc. student in Computer Science exploring the intersection
-            of machine learning, computational biology, and genomic data analysis.
+            of neuroscience, computational biology, machine learning,
+            deep learning, and genomic data analysis.
           </p>
 
           <div class="hero-actions">
@@ -726,14 +602,8 @@
 
         </div>
 
-        <div class="hero-mark" aria-label="LK monogram">
-
-          <div class="monogram">LK</div>
-
-          <div class="mark-caption">
-            Research · Discovery · Code
-          </div>
-
+        <div class="hero-photo">
+          <img src="me.jpg" alt="Laya Khosravi">
         </div>
 
       </section>
@@ -770,8 +640,8 @@
 
             <p>
               My academic interests focus on applying computational methods
-              to biological questions, particularly machine learning,
-              transcriptomic data analysis, and biomarker discovery.
+              to biological and biomedical questions, particularly machine learning,
+              transcriptomic data analysis, neuroscience, and genomic research.
             </p>
 
             <p>
@@ -786,7 +656,7 @@
 
       </section>
 
-      <!-- RESEARCH -->
+      <!-- RESEARCH INTERESTS -->
 
       <section id="research">
 
@@ -794,7 +664,7 @@
 
           <div>
             <div class="section-kicker">02 / Research</div>
-            <h2>Areas of interest</h2>
+            <h2>Research Interests</h2>
           </div>
 
         </div>
@@ -805,11 +675,11 @@
 
             <div class="interest-num">01</div>
 
-            <h3>Machine Learning</h3>
+            <h3>Neuroscience</h3>
 
             <p>
-              Feature selection, dimensionality reduction,
-              and interpretable analysis.
+              Understanding the brain, neural systems,
+              and their underlying biological mechanisms.
             </p>
 
           </article>
@@ -818,11 +688,11 @@
 
             <div class="interest-num">02</div>
 
-            <h3>Computational Biology</h3>
+            <h3>Neurological Disorders</h3>
 
             <p>
-              Computational approaches to biological
-              and biomedical questions.
+              Investigating the molecular and genetic
+              mechanisms of brain-related diseases.
             </p>
 
           </article>
@@ -831,11 +701,52 @@
 
             <div class="interest-num">03</div>
 
-            <h3>Genomic Data Analysis</h3>
+            <h3>Computational Biology</h3>
 
             <p>
-              Transcriptomics, biomarker discovery,
-              and single-cell analysis.
+              Using computational approaches to explore
+              complex biological and biomedical questions.
+            </p>
+
+          </article>
+
+          <article class="interest">
+
+            <div class="interest-num">04</div>
+
+            <h3>Machine Learning & Deep Learning</h3>
+
+            <p>
+              Developing intelligent models for biological
+              data analysis and biomedical applications.
+            </p>
+
+          </article>
+
+          <article class="interest">
+
+            <div class="interest-num">05</div>
+
+            <h3>Disease Treatment Research</h3>
+
+            <p>
+              Exploring computational approaches to
+              understanding diseases and discovering
+              potential therapeutic strategies.
+            </p>
+
+          </article>
+
+          <article class="interest">
+
+            <div class="interest-num">06</div>
+
+            <h3>Disease Genomics</h3>
+
+            <p>
+              Investigating genomic alterations,
+              gene expression, and molecular biomarkers
+              associated with diseases.
             </p>
 
           </article>
@@ -844,102 +755,52 @@
 
       </section>
 
-      <!-- BEYOND RESEARCH -->
+      <!-- EDUCATION -->
 
-      <section id="beyond">
+      <section id="education">
 
         <div class="section-head">
 
           <div>
-            <div class="section-kicker">03 / Beyond research</div>
-            <h2>A few things I enjoy</h2>
-          </div>
-
-          <div class="section-note">
-            The little things that make life interesting
+            <div class="section-kicker">03 / Education</div>
+            <h2>Academic Background</h2>
           </div>
 
         </div>
 
-        <div class="personal-grid">
+        <div class="education-grid">
 
-          <article class="personal-card">
+          <article class="education-card">
 
-            <div class="personal-icon" aria-hidden="true">✦</div>
+            <div class="date">Graduate Studies · Current</div>
 
-            <h3>Films &amp; Series</h3>
+            <h3>M.Sc. in Computer Science</h3>
 
             <p>
-              Immersive stories, memorable characters,
-              and the world of <em>Game of Thrones</em>.
+              Shahrekord University, Iran
+            </p>
+
+            <p>
+              GPA: 18.08 / 20
+            </p>
+
+            <p>
+              Ranked 1st in the class
             </p>
 
           </article>
 
-          <article class="personal-card">
+          <article class="education-card">
 
-            <div class="personal-icon" aria-hidden="true">⌁</div>
+            <div class="date">Undergraduate Studies</div>
 
-            <h3>Books</h3>
+            <h3>B.Sc. in Biology</h3>
 
             <p>
-              Books about success, personal growth,
-              and new ways of thinking.
+              Alzahra University, Tehran, Iran
             </p>
 
           </article>
-
-          <article class="personal-card">
-
-            <div class="personal-icon" aria-hidden="true">❋</div>
-
-            <h3>Nature</h3>
-
-            <p>
-              Finding inspiration, calm, and perspective
-              in the natural world.
-            </p>
-
-          </article>
-
-          <article class="personal-card">
-
-            <div class="personal-icon" aria-hidden="true">↗</div>
-
-            <h3>Sports</h3>
-
-            <p>
-              Swimming and tennis — movement, focus,
-              and the joy of being active.
-            </p>
-
-          </article>
-
-          <article class="personal-card">
-
-            <div class="personal-icon" aria-hidden="true">☕</div>
-
-            <h3>Coffee &amp; Tea</h3>
-
-            <p>
-              Slow moments, warm cups,
-              and the simple pleasure of a good drink.
-            </p>
-
-          </article>
-
-        </div>
-
-        <div style="margin-top:32px; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:16px;">
-
-          <p class="personal-note" style="margin:0;">
-            A little curiosity, a little movement, a good story,
-            and always time for coffee or tea.
-          </p>
-
-          <a class="button secondary" href="interests.html">
-            Explore Gallery &amp; Favorites ↗
-          </a>
 
         </div>
 
@@ -952,12 +813,12 @@
         <div class="section-head">
 
           <div>
-            <div class="section-kicker">04 / Selected work</div>
+            <div class="section-kicker">04 / Selected Work</div>
             <h2>Projects</h2>
           </div>
 
           <div class="section-note">
-            Computational research &amp; analysis
+            Computational research & analysis
           </div>
 
         </div>
@@ -1023,45 +884,6 @@
 
       </section>
 
-      <!-- EDUCATION -->
-
-      <section id="education">
-
-        <div class="section-head">
-
-          <div>
-            <div class="section-kicker">05 / Education</div>
-            <h2>Academic background</h2>
-          </div>
-
-        </div>
-
-        <div class="education-grid">
-
-          <article class="education-card">
-
-            <div class="date">Current studies</div>
-
-            <h3>M.Sc. in Computer Science</h3>
-
-            <p>Shahrekord University</p>
-
-          </article>
-
-          <article class="education-card">
-
-            <div class="date">Undergraduate studies</div>
-
-            <h3>B.Sc. in Biology</h3>
-
-            <p>Alzahra University</p>
-
-          </article>
-
-        </div>
-
-      </section>
-
     </div>
 
     <!-- CONTACT -->
@@ -1070,7 +892,7 @@
 
       <div class="wrap">
 
-        <div class="section-kicker">06 / Contact</div>
+        <div class="section-kicker">05 / Contact</div>
 
         <h2>
           Interested in research or collaboration?
