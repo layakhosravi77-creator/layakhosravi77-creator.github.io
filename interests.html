@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -211,14 +210,15 @@
 
     .interest-list {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 18px;
+      grid-template-columns: repeat(2, minmax(0, 400px));
+      justify-content: center;
+      gap: 22px;
     }
 
     .interest-card {
       background: var(--white);
       border: 1px solid var(--line);
-      padding: 30px;
+      padding: 25px;
       min-height: 235px;
       display: flex;
       flex-direction: column;
@@ -230,7 +230,7 @@
       border-color: #b8c7b8;
     }
 
-    /* SQUARE IMAGE PLACEHOLDERS */
+    /* INTEREST IMAGES */
 
     .interest-image-placeholder {
       width: 120px;
@@ -417,13 +417,17 @@
         padding: 58px 0;
       }
 
-      .family-grid,
-      .interest-list {
+      .family-grid {
         grid-template-columns: 1fr;
       }
 
       .family-card {
         max-width: 480px;
+      }
+
+      .interest-list {
+        grid-template-columns: minmax(0, 400px);
+        justify-content: center;
       }
 
       .interest-card {
@@ -468,7 +472,6 @@
   <!-- HEADER -->
 
   <header class="wrap topbar">
-
     <a class="brand" href="index.html" aria-label="Laya Khosravi home">
       Laya<span>.</span>
     </a>
@@ -481,7 +484,6 @@
       <a href="index.html#education">EDUCATION</a>
       <a href="index.html#contact">CONTACT</a>
     </nav>
-
   </header>
 
   <main>
@@ -491,7 +493,6 @@
       <!-- HERO -->
 
       <section class="hero">
-
         <h1>
           A world<br>
           <em>beyond the code.</em>
@@ -500,7 +501,6 @@
         <p class="hero-description">
           Maybe life is about enjoying the little moments! at least, that's what it means to me!
         </p>
-
       </section>
 
       <!-- FAMILY -->
@@ -523,7 +523,6 @@
         <div class="family-grid">
 
           <article class="family-card">
-
             <img
               class="family-photo"
               src="matin.jpg"
@@ -531,11 +530,9 @@
             >
 
             <h3 class="family-name">Matin</h3>
-
           </article>
 
           <article class="family-card">
-
             <img
               class="family-photo"
               src="amir.jpg"
@@ -543,11 +540,9 @@
             >
 
             <h3 class="family-name">Amir</h3>
-
           </article>
 
         </div>
-
       </section>
 
       <!-- INTERESTS -->
@@ -566,9 +561,8 @@
           <!-- FILMS & SERIES -->
 
           <article class="interest-card">
-
             <div class="interest-image-placeholder">
-              <!-- Add your image here -->
+              <img src="films.jpg" alt="Films and series">
             </div>
 
             <h3>Films &amp; Series</h3>
@@ -579,15 +573,13 @@
               <li>The Walking Dead</li>
               <li>The Last of Us</li>
             </ul>
-
           </article>
 
           <!-- SPORTS & ACTIVITY -->
 
           <article class="interest-card">
-
             <div class="interest-image-placeholder">
-            <img src="sports.jpg" alt="Sports and activities">
+              <img src="sports.jpg" alt="Sports and activities">
             </div>
 
             <h3>Sports &amp; Activity</h3>
@@ -599,14 +591,13 @@
               <li>Futsal</li>
               <li>Bodybuilding</li>
             </ul>
+          </article>
 
-            </article>
           <!-- BOOKS -->
 
           <article class="interest-card">
-
             <div class="interest-image-placeholder">
-              <!-- Add your image here -->
+              <img src="books.jpg" alt="Books">
             </div>
 
             <h3>Books</h3>
@@ -618,15 +609,13 @@
               <li>Crime and Punishment</li>
               <li>The Silent Patient</li>
             </ul>
-
           </article>
 
           <!-- NATURE -->
 
           <article class="interest-card">
-
             <div class="interest-image-placeholder">
-              <!-- Add your image here -->
+              <img src="nature.jpg" alt="Nature">
             </div>
 
             <h3>Nature</h3>
@@ -635,15 +624,13 @@
               <li>The Persian Gulf</li>
               <li>The Forests of Northern Iran</li>
             </ul>
-
           </article>
 
           <!-- COFFEE & TEA -->
 
           <article class="interest-card">
-
             <div class="interest-image-placeholder">
-              <!-- Add your image here -->
+              <img src="coffee.jpg" alt="Coffee and tea">
             </div>
 
             <h3>Coffee &amp; Tea</h3>
@@ -651,11 +638,9 @@
             <p>
               They are a big part of my interests, and I absolutely adore them!
             </p>
-
           </article>
 
         </div>
-
       </section>
 
       <!-- FEATURED SECTION -->
@@ -672,7 +657,6 @@
         <div class="featured">
 
           <div>
-
             <div class="featured-label">An idea I believe in</div>
 
             <h3>
@@ -684,7 +668,6 @@
               a new skill, or an unfamiliar place, I believe curiosity
               is one of the best ways to keep growing.
             </p>
-
           </div>
 
           <div class="featured-mark" aria-hidden="true">
@@ -692,7 +675,6 @@
           </div>
 
         </div>
-
       </section>
 
     </div>
@@ -744,4 +726,3 @@
 
 </body>
 </html>
-```
